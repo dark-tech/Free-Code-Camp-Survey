@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Certification Form</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div class="title">
+    <header>
+        
+            <h1 id="title">Repair Service Customer Experience</h1>
+                <p id="description">
+                    Here at AZ Appliance, we always find ways to provide excellent service.
+                    Our team would love to hear from you on how we can do better.
+                </p>
+    </header>
+</div>
+<div>
+    <form id="survey-form" method="post">
+        <div class="cust-input">
+            <label
+            id="name-label" for="name">Name
+            <input type="text" name="name" id="name" placeholder="type your name" required/>
+        </label>
+        </div>
+
+        <div class="cust-input">
+            <label id="address-label" for="address">Address
+            <input type="address" name="address" id="address" placeholder="type your address" required/></label>
+        </div>
+
+        <div class="cust-input">
+            <label for="number" id="number-label" >Phone Number
+            <input id="number" type="number" name="number" pattern="0000000000" placeholder="type your number" min="10" max="10" required></label>
+        </div>
+
+        <div class="cust-input">
+            <label for="email" id="email-label">Email Address
+            <input id="email" type="email" name="email" placeholder="type your email" required></label>
+        </div>
+
+        <div class="cust-input">
+            <label for="appliance" id="appliance-label">Number of Appliances Repaired
+            <input type="number" name="appliance" min="1" max="10" required/></label>
+        </div>
+
+        <div >
+            <p>What type of appliance did we repair?</p>
+            <select id="dropdown" name="appliancetype" class="cust-input" required>
+                <option disabled="appliance type" selected>Appliance Type</option>
+                <option value="dryer">Clothes Dryer</option>
+                <option value="washer">Clothes Washer</option>
+                <option value="dishwasher">Dishwasher</option>
+                <option value="refrigerator">Refrigerator</option>
+                <option value="range-oven">Range / Oven</option>
+                <option value="microwave">Microwave</option>
+                <option value="cooktop">Cooktop</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        
+        <div class="scale">
+            <p>On a 1-5 scale. How was your experience with our Repair Technician?</p>
+            <label for="1" name="tech-scale"><input type="radio" name="tech-scale" value="1">1</label>
+            <label for="2" name="tech-scale"><input type="radio" name="tech-scale" value="2">2</label>
+            <label for="3" name="tech-scale"><input type="radio" name="tech-scale" value="3">3</label>
+            <label for="4" name="tech-scale"><input type="radio" name="tech-scale" value="4">4</label>
+            <label for="5" name="tech-scale"><input type="radio" name="tech-scale" value="5">5</label>
+        </div>
+
+        <div>
+            <p>Did our Repair Technician comply to the guidelines we provided for customer contact?<span class="to-do">(Select all that apply)</span></p>
+            <label for=eta><input type="checkbox" value="eta">Provided ETA when on the way</label>
+            <label for=safety><input type="checkbox" value="safety">Followed Physical distancing in-line to Covid Safety Protocol</label>
+            <label for=clean><input type="checkbox" value="clean">Cleaned workspace after the service</label>
+            <label for=no-stock><input type="checkbox" value="no stock">Provided next step (for parts not on stock)</label>
+            <label for=invoice><input type="checkbox" value="invoice">Provided payment invoice</label>
+        </div>
+        
+        <div>
+            <p>Other Comments :</p>
+            <textarea placeholder="We appreciate your feedback"></textarea>
+        </div>
+
+        <div>
+            <button id="submit" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
